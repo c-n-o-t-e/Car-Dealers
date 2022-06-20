@@ -1,0 +1,55 @@
+### Find a particular user with given ID
+
+GET http://localhost:3000/auth/13
+
+### Find all user with a given email
+
+GET http://localhost:3000/auth?email=wppmmom@ppom.com
+
+### Get the current signed in user
+
+GET http://localhost:3000/auth/whoami
+
+
+### Create a new report
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "make": "toyota",
+    "model": "corolla",
+    "year": 1980,
+    "mileage": 10000,
+    "lng": 0,
+    "lat": 0,
+    "price": 50000
+}
+
+### Approve report
+PATCH  http://localhost:3000/reports/1
+Content-Type: application/json
+
+{
+    "approved": false
+}
+
+### Create a new user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "wppmmom@ppom.com",
+    "password": "jkjjmkkjkkkjj"
+}
+
+### Remove a User
+
+DELETE http://localhost:3000/auth/7
+
+### Update a user
+PATCH http://localhost:3000/auth/8
+Content-Type: application/json
+
+{
+    "password": "wdey@kk"
+}

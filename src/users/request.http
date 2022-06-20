@@ -1,0 +1,45 @@
+### Find a particular user with given ID
+
+GET http://localhost:3000/auth/13
+
+### Find all user with a given email
+
+GET http://localhost:3000/auth?email=wppmmom@ppom.com
+
+### Get the current signed in user
+
+GET http://localhost:3000/auth/whoami
+
+
+### Create a new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "admin@ppom.com",
+    "password": "jkjjmkkjkmkkjj"
+}
+
+### signout a new user
+POST http://localhost:3000/auth/signout
+
+### Create a new user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "jkjjmkkjkmkkjj"
+}
+
+### Remove a User
+
+DELETE http://localhost:3000/auth/7
+
+### Update a user
+PATCH http://localhost:3000/auth/1
+Content-Type: application/json
+
+{
+    "admin": false
+}
